@@ -4,9 +4,12 @@ namespace BeyondCode\Vouchers\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Hyn\Tenancy\Traits\UsesTenantConnection;
 
 class Voucher extends Model
 {
+    use UsesTenantConnection;
+    
     protected $fillable = [
         'model_id',
         'model_type',
